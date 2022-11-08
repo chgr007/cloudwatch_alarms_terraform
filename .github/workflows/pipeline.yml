@@ -45,14 +45,17 @@ jobs:
 
       - name: Terraform Format
         id: fmt
+        working-directory: ./infra
         run: terraform fmt -check
 
       - name: Terraform Init
         id: init
+        working-directory: ./infra
         run: terraform init
 
       - name: Terraform Validate
         id: validate
+        working-directory: ./infra
         run: terraform validate -no-color
 
       - name: Terraform Plan
