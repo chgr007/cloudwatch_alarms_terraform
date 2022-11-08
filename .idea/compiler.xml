@@ -7,9 +7,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="demo" />
+        <module name="cloudwatch_alarms_terraform" />
         <module name="09-metric-cloudwatch-terraform" />
         <module name="10-cloudwatch-alarms-terraform" />
+        <module name="demo" />
       </profile>
     </annotationProcessing>
   </component>
@@ -17,6 +18,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="09-metric-cloudwatch-terraform" options="-parameters" />
       <module name="10-cloudwatch-alarms-terraform" options="-parameters" />
+      <module name="cloudwatch_alarms_terraform" options="-parameters" />
       <module name="demo" options="-parameters" />
     </option>
   </component>
