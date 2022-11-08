@@ -39,7 +39,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-
+        working-directory: ./infra
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v1
 
@@ -67,4 +67,5 @@ jobs:
 
       - name: Terraform Apply
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        working-directory: ./infra
         run: terraform apply -auto-approve
